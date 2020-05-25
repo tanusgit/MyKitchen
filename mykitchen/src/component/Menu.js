@@ -19,13 +19,22 @@ class Menu extends Component {
     renderDish(dish) {
         if (dish != null)
             return (
-                <Card>
-                    <CardImg top src={dish.image} alt={dish.name} />
-                    <CardBody>
-                        <CardTitle>{dish.name}</CardTitle>
-                        <CardText>{dish.description}</CardText>
-                    </CardBody>
-                </Card>
+                <div className="container" key={dish.id}
+                    onClick={() => this.onDishSelect(dish)}>
+
+                    <div className="col-md-8">
+                        <div className="row">
+                            <div className="col-12 col-md-12 m-1">
+                                <CardTitle>{dish.name}</CardTitle>
+                                <CardText>{dish.description}</CardText>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
             );
         else
             return (
@@ -36,7 +45,7 @@ class Menu extends Component {
     render() {
         const menu = this.props.dishes.map((dish) => {
             return (
-                <div className="col-12 col-md-5 m-1">
+                <div className="col-12 col-md-12 m-1">
                     <Card key={dish.id}
                         onClick={() => this.onDishSelect(dish)}>
                         <CardImg width="100%" src={dish.image} alt={dish.name} />
@@ -50,13 +59,19 @@ class Menu extends Component {
 
         return (
             <div className="container">
-                <div className="col-12 col-md-5 m-1">
+                <div className="col-12 col-md-12">
                     <div className="row">
-                        {menu}
-                        {this.renderDish(this.state.selectedDish)}
+                        <div className="col-md-5 m-1">
+                            {menu}
+                        </div>
+                        <div className="col-md-5 m-1">
+                            {this.renderDish(this.state.selectedDish)}
+                        </div>
+
                     </div>
+
                 </div>
-              
+
             </div>
         );
     }
