@@ -6,7 +6,10 @@ import Menu from './component/Menu';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './component/Home';
 import About from './component/About';
+import Login from './component/Login';
+import Sign from './component/Sign';
 import NavbarNew from './component/NavbarNew';
+import Job from './component/jobs';
 
 
 /*class App extends Component {
@@ -40,6 +43,9 @@ function App() {
           <Switch>
               <Route path="/" component={Home} exact />
               <Route path="/About" component={About} />
+              <Route path="/Login" component={Login} />
+              <Route path="/Sign" component={Sign} />
+              <Route path="/Job" component={Job} />
           </Switch>
       </main>
   )
