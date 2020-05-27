@@ -3,19 +3,21 @@ import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
 } from 'reactstrap';
+import Home from './Home'
 
 class Job extends Component {
 
     constructor(props) {
         super(props);
+        this.gotoGit = this.go.bind(this);
     }
 
+    go() {
+       return <p>hello world</p>
+    }
 
     render() {
-
-
         return (
-
             <div className="container" style={{ marginleft: '25px', marginright: '25px', bordercolor: 'blue' }}>
                 <div className="row">
                     <div className="col-md-5 m-2">
@@ -25,7 +27,7 @@ class Job extends Component {
                                 <CardTitle>Card title</CardTitle>
                                 <CardSubtitle>Card subtitle</CardSubtitle>
                                 <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                                <Button href="https://reactstrap.github.io/components/card/">Button</Button>
+                                <Button href="/Login">Button</Button>
                             </CardBody>
                         </Card>
                     </div>
@@ -36,7 +38,7 @@ class Job extends Component {
                                 <CardTitle>Card title</CardTitle>
                                 <CardSubtitle>Card subtitle</CardSubtitle>
                                 <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                                <Button href="https://reactstrap.github.io/components/card/">Button</Button>
+                                <Button onClick={this.go()} >Button</Button>
                             </CardBody>
                         </Card>
                     </div>
