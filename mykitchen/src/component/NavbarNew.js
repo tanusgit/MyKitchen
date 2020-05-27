@@ -33,9 +33,7 @@ const NavbarNew = (props) => {
             <NavItem>
               <NavLink href="/About">About</NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink href="/Login">Login</NavLink>
-            </NavItem>
+            
             <NavItem>
               <NavLink href="/">Home</NavLink>
             </NavItem>
@@ -56,8 +54,11 @@ const NavbarNew = (props) => {
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
+            <NavItem>
+              <NavLink href="/Login">Login</NavLink>
+            </NavItem>
           </Nav>
-          <NavbarText>Simple</NavbarText>
+          <a href="/Login">Simple</a>
         </Collapse>
       </Navbar>
     </div>
