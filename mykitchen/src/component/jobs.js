@@ -9,11 +9,14 @@ class Job extends Component {
 
     constructor(props) {
         super(props);
-        this.gotoGit = this.go.bind(this);
+        this.go = this.go.bind(this);
     }
 
     go() {
-       return <p>hello world</p>
+       return (
+           <div><p>hello world</p></div>
+       
+       );
     }
 
     render() {
@@ -38,7 +41,7 @@ class Job extends Component {
                                 <CardTitle>Card title</CardTitle>
                                 <CardSubtitle>Card subtitle</CardSubtitle>
                                 <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                                <Button onClick={this.go()} >Button</Button>
+                                <Button onClick={this.go} >Button</Button>
                             </CardBody>
                         </Card>
                     </div>

@@ -32,8 +32,8 @@ import Job from './component/jobs';
     );
   }
 
-}
-*/
+}*/
+
 
 function App() {
   return (
