@@ -4,27 +4,28 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 're
 
 class DishDetail extends Component {
 
-  constructor(props) {
-    super(props);
+    constructor(props) {
+        super(props);
+    }
 
-  }
+    render() {
+        const dish = this.props.recipe;
+        return (<> <p>Comments</p>
+            {
+                dish.comments.map((c) => (
+                    <>
+                        <ul>
+                            <p>{c.comment}</p>
+                            <p>-- {c.author}, {c.date}</p>
+                            <p></p>
 
-  render() {
-    var i = 1;
-    const dish = this.props.recipe;
-    return (<>{dish.comments.map((c) => (
-      <>
-      <p>Comment# {i++}</p>
-      <ul>
-        <li>{c.author}</li>
-        <li>{c.date}</li>
-        <li>{c.comment}</li>
-      </ul>
-      </>)
-    )}</>
-    )
-  }
+                        </ul>
+                    </>)
+                )
+            }</>
+        )
+    }
 
 }
 
- export default DishDetail;
+export default DishDetail;
