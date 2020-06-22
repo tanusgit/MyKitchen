@@ -11,7 +11,6 @@ import Sign from './component/Sign';
 import NavbarNew from './component/NavbarNew';
 import Job from './component/jobs';
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -31,14 +30,11 @@ class App extends Component {
       </div>
     );
   }
-
 }
-
 
 
 /*function App() {
   return (
-
       <main>
         <NavbarNew>Kitchen</NavbarNew>
           <Switch>
@@ -49,6 +45,7 @@ class App extends Component {
               <Route path="/Job" component={Job} />
           </Switch>
       </main>
+
   )
 }
 
