@@ -12,7 +12,7 @@ import NavbarNew from './component/NavbarNew';
 import Job from './component/jobs';
 
 
-/*class App extends Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,10 +32,11 @@ import Job from './component/jobs';
     );
   }
 
-}*/
+}
 
 
-function App() {
+
+/*function App() {
   return (
 
       <main>
@@ -51,5 +52,5 @@ function App() {
   )
 }
 
-
+*/
 export default App;
